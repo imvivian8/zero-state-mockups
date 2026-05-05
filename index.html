@@ -55,6 +55,28 @@ body {
   color: #6e7173;
   max-width: 760px;
 }
+.legend {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  max-width: 760px;
+}
+.legend-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #6e7173;
+  margin-bottom: 10px;
+}
+.legend-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.legend-item {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
 .scenario {
   margin-bottom: 56px;
 }
@@ -130,6 +152,7 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: -.005em;
+  padding-right: 24px;
 }
 .card-desc {
   font-size: 13px;
@@ -143,7 +166,31 @@ body {
   color: #00892e;
   text-transform: uppercase;
   letter-spacing: .04em;
+  margin-bottom: 8px;
 }
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f3f3;
+}
+.action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 100px;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.action-pill.contacts { background: #e0edff; color: #205ea3; }
+.action-pill.integration { background: #f0e8ff; color: #6f4cd6; }
+.action-pill.email { background: #d2f8d9; color: #00892e; }
+.action-pill.automation { background: #ffe6d4; color: #c9540d; }
 .card-arrow {
   position: absolute;
   top: 20px; right: 20px;
@@ -157,7 +204,16 @@ body {
 <div class="hero">
   <div class="hero-eyebrow">Opportunity 9 · Q4 FY26</div>
   <h1>Zero State Mockups</h1>
-  <p>35 ideas across 7 zero-state scenarios on the Marketing Dashboard. Each mockup applies a behavioral-science nudge to convert a dead-end empty state into a next-best action. Click any tile for a full-page mockup.</p>
+  <p>35 ideas across 7 zero-state scenarios on the Marketing Dashboard. Each mockup applies a behavioral-science nudge to convert a dead-end empty state into a next-best action — and is tagged with the activation goal it primarily drives.</p>
+  <div class="legend">
+    <div class="legend-title">Activation goal each mockup encourages</div>
+    <div class="legend-row">
+      <span class="legend-item"><span class="action-pill contacts">📇 Adding contacts</span></span>
+      <span class="legend-item"><span class="action-pill integration">🛒 Connecting integration</span></span>
+      <span class="legend-item"><span class="action-pill email">✉️ Sending first email</span></span>
+      <span class="legend-item"><span class="action-pill automation">⚡ Turning on automation</span></span>
+    </div>
+  </div>
 </div>
 
 <!-- ─────────── SCENARIO 1 ─────────── -->
@@ -174,6 +230,7 @@ body {
       <div class="card-title">ICP Sample Dashboard</div>
       <div class="card-desc">Show a fully lit-up dashboard with realistic data for their industry. Watermark "Sample data." One CTA: import contacts.</div>
       <div class="card-tactic">Tactic: Goal visualization</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=1b">
@@ -181,6 +238,7 @@ body {
       <div class="card-title">3-Path Low-Commitment Importer</div>
       <div class="card-desc">"Start in 30 seconds": paste 5 emails, connect Gmail, or upload CSV. Visible time estimates remove cold-start freeze.</div>
       <div class="card-tactic">Tactic: Effort reduction</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=1c">
@@ -188,6 +246,7 @@ body {
       <div class="card-title">Goal-First Agent Onboarding</div>
       <div class="card-desc">Two questions: what do you sell, who buys it. AI builds audience schema + segments + first email. Audience setup as byproduct.</div>
       <div class="card-tactic">Tactic: Reframing</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=1d">
@@ -195,6 +254,7 @@ body {
       <div class="card-title">Borrowed Social Proof Tile</div>
       <div class="card-desc">"12,000 nonprofits like you started here. Median time to first send: 14 minutes." Anchors effort estimate.</div>
       <div class="card-tactic">Tactic: Social proof</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=1e">
@@ -202,6 +262,7 @@ body {
       <div class="card-title">Test-With-My-Inbox Trick</div>
       <div class="card-desc">Pre-create a tiny audience with just the user's email. They send a real campaign to themselves first, then import.</div>
       <div class="card-tactic">Tactic: Foot in the door</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span><span class="action-pill contacts">📇 Adding contacts</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -221,6 +282,7 @@ body {
       <div class="card-title">AI-Drafted First Campaign Card</div>
       <div class="card-desc">Replaces empty chart with pre-written subject + preview based on industry & brand. CTA: review & send a 90%-done draft.</div>
       <div class="card-tactic">Tactic: Default bias</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=2b">
@@ -228,6 +290,7 @@ body {
       <div class="card-title">"What If You Sent Today?" Forecast</div>
       <div class="card-desc">Fill the line chart with projected opens/clicks from list size × industry benchmark. Empty becomes potential.</div>
       <div class="card-tactic">Tactic: Anticipated regret</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=2c">
@@ -235,6 +298,7 @@ body {
       <div class="card-title">3-Campaign Starter Pack</div>
       <div class="card-desc">Welcome / Promo / Win-back. All pre-filled with their brand. "Pick one, send in 60 seconds."</div>
       <div class="card-tactic">Tactic: Choice architecture</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span><span class="action-pill automation">⚡ Turning on automation</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=2d">
@@ -242,6 +306,7 @@ body {
       <div class="card-title">Lookalike Campaign Library</div>
       <div class="card-desc">"Top-performing email from a pet brand your size last week." Real subject + open rate. CTA: use this template.</div>
       <div class="card-tactic">Tactic: Social proof + mimicry</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=2e">
@@ -249,6 +314,15 @@ body {
       <div class="card-title">Send-To-Self Preview</div>
       <div class="card-desc">"See what your subscribers see. Send a test to yourself now." Lowest-commitment send to break the seal.</div>
       <div class="card-tactic">Tactic: Foot in the door</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
+      <span class="card-arrow">→</span>
+    </a>
+    <a class="card" href="mockup.html?id=2f" style="border-color:#a07d00;background:linear-gradient(135deg,#fffceb,#fff8d0)">
+      <div class="card-id" style="color:#a07d00">2.F · NEW</div>
+      <div class="card-title">Industry Benchmark Trajectory</div>
+      <div class="card-desc">Each chart shows industry median in gray, your dotted trajectory rising from below to above into a green "win zone." Streak counter + 3-send plan turn empty widgets into a beat-the-industry game. <em>(Cross-cutting nudge — could also fit Scenario 6 or 7.)</em></div>
+      <div class="card-tactic">Tactic: Goal gradient + curiosity gap + streak</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -268,6 +342,7 @@ body {
       <div class="card-title">LLM-Generated Sample SMS</div>
       <div class="card-desc">Real draft using their brand + recent campaign topic. "Send this to your most engaged 500?" One-tap register & send.</div>
       <div class="card-tactic">Tactic: Concrete preview</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=3b">
@@ -275,6 +350,7 @@ body {
       <div class="card-title">Revenue Counter</div>
       <div class="card-desc">"Stores your size add $2,400/mo by layering SMS on email." Concrete dollars beat abstract benefit.</div>
       <div class="card-tactic">Tactic: Loss aversion</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=3c">
@@ -282,6 +358,7 @@ body {
       <div class="card-title">Email + SMS Lift Benchmark</div>
       <div class="card-desc">Mini bar chart: email-only vs. email+SMS conversion for their industry. Visual loss-aversion.</div>
       <div class="card-tactic">Tactic: Visual contrast</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=3d">
@@ -289,6 +366,7 @@ body {
       <div class="card-title">2-Tap Inline Registration</div>
       <div class="card-desc">Compress SMS setup to one screen with smart defaults. Form lives inline in the zero state. No unknown-flow fear.</div>
       <div class="card-tactic">Tactic: Effort reduction</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=3e">
@@ -296,6 +374,7 @@ body {
       <div class="card-title">Customer Testimonial Card</div>
       <div class="card-desc">Short quote + photo from a similar-sized brand: "Added SMS in week 1, saw 23% revenue lift."</div>
       <div class="card-tactic">Tactic: Specific social proof</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -315,6 +394,7 @@ body {
       <div class="card-title">Ghost Widget With Projected Revenue</div>
       <div class="card-desc">Show chart shape with grayed-out estimated revenue line. Overlay: "Connect Shopify in 2 clicks to see real numbers."</div>
       <div class="card-tactic">Tactic: Curiosity gap</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=4b">
@@ -322,6 +402,7 @@ body {
       <div class="card-title">Live Revenue Calculator</div>
       <div class="card-desc">"Your 12k-contact list likely drives ~$X/mo in tracked revenue you can't see today." Personal calc.</div>
       <div class="card-tactic">Tactic: Loss quantification</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=4c">
@@ -329,6 +410,7 @@ body {
       <div class="card-title">One-Click Integration Carousel</div>
       <div class="card-desc">Logos: Shopify, Woo, Square, BigCommerce, Stripe. Click → OAuth. Skip the "set up store" wizard.</div>
       <div class="card-tactic">Tactic: Path of least resistance</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=4d">
@@ -336,6 +418,7 @@ body {
       <div class="card-title">"What You're Missing" Side-by-Side</div>
       <div class="card-desc">ECU dashboard view vs. their current view. Endowment + loss aversion. "They see ROAS, AOV, repeat-buyer %."</div>
       <div class="card-tactic">Tactic: Endowment effect</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=4e">
@@ -343,6 +426,7 @@ body {
       <div class="card-title">Auto-Detect Installed Platforms</div>
       <div class="card-desc">"We noticed you use Shopify — connect in one click." Removes the "which integration?" decision.</div>
       <div class="card-tactic">Tactic: Decision elimination</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -362,6 +446,7 @@ body {
       <div class="card-title">Live ICP Sample Dashboard</div>
       <div class="card-desc">Fully interactive sample with industry-matched data. Persistent rail: "This is Standard. Upgrade to see yours."</div>
       <div class="card-tactic">Tactic: Value preview</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=5b">
@@ -369,6 +454,7 @@ body {
       <div class="card-title">7-Day Standard Preview</div>
       <div class="card-desc">Unlock real dashboard with their data for a week. Endowment effect: taking it back hurts more than upgrading.</div>
       <div class="card-tactic">Tactic: Endowment effect</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=5c">
@@ -376,6 +462,7 @@ body {
       <div class="card-title">Free vs Standard Split-Tile</div>
       <div class="card-desc">Half the tiles render their real (sparse) data. Other half show what'd be visible on Standard, blurred but real.</div>
       <div class="card-tactic">Tactic: Direct comparison</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=5d">
@@ -383,6 +470,7 @@ body {
       <div class="card-title">Feature Usage Gap Counter</div>
       <div class="card-desc">"You sent 3 campaigns. Standard users your size send 11 and earn $4,200 more." Personalized to actual activity.</div>
       <div class="card-tactic">Tactic: Peer comparison</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=5e">
@@ -390,6 +478,7 @@ body {
       <div class="card-title">Single-Tile Unlock Trial</div>
       <div class="card-desc">"Unlock Marketing ROI tile free for 14 days." Lowers ask from full plan to one feature. Foot-in-the-door.</div>
       <div class="card-tactic">Tactic: Foot in the door</div>
+      <div class="card-actions"><span class="action-pill integration">🛒 Connecting integration</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -409,6 +498,7 @@ body {
       <div class="card-title">Smart Filter Recovery</div>
       <div class="card-desc">"No campaigns Apr 3–May 3. You sent 4 in Jan–Mar — view those instead?" Auto-suggests a range with data.</div>
       <div class="card-tactic">Tactic: Error recovery</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=6b">
@@ -416,6 +506,7 @@ body {
       <div class="card-title">Inline Campaign Agent</div>
       <div class="card-desc">"Looks like a quiet stretch. Want me to plan one for next week?" Agent asks 2 questions, drafts a campaign.</div>
       <div class="card-tactic">Tactic: Conversational prompt</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=6c">
@@ -423,6 +514,7 @@ body {
       <div class="card-title">Benchmark Fallback</div>
       <div class="card-desc">When their data is empty, show industry benchmarks for the same period. Empty becomes comparable.</div>
       <div class="card-tactic">Tactic: Anchoring</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=6d">
@@ -430,6 +522,7 @@ body {
       <div class="card-title">Cadence Diagnosis</div>
       <div class="card-desc">"Your last send was 47 days ago. Brands your size send every 8 days for best engagement."</div>
       <div class="card-tactic">Tactic: Specific gap framing</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span><span class="action-pill automation">⚡ Turning on automation</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=6e">
@@ -437,6 +530,7 @@ body {
       <div class="card-title">Reset Filters One-Click</div>
       <div class="card-desc">"Your filter excludes 100% of your data. Show all campaigns?" Treats it as bug recovery, not content gap.</div>
       <div class="card-tactic">Tactic: Friction removal</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
@@ -456,6 +550,7 @@ body {
       <div class="card-title">Diagnostic Insight, Not Just Display</div>
       <div class="card-desc">"0 opens usually means: subject line, send time, or list health. Your list has 14% bounces — clean it?"</div>
       <div class="card-tactic">Tactic: Reframe failure</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=7b">
@@ -463,6 +558,7 @@ body {
       <div class="card-title">AI A/B Retry Suggestion</div>
       <div class="card-desc">"Try the same content with this subject to a 10% holdout." Turns a zero into experiment, not verdict.</div>
       <div class="card-tactic">Tactic: Growth mindset</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=7c">
@@ -470,6 +566,7 @@ body {
       <div class="card-title">List Hygiene CTA</div>
       <div class="card-desc">Specific to bounce/unsub spikes. "Your unsub rate is 10% (industry: 0.3%). Re-segment?"</div>
       <div class="card-tactic">Tactic: Specific diagnosis</div>
+      <div class="card-actions"><span class="action-pill contacts">📇 Adding contacts</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=7d">
@@ -477,6 +574,7 @@ body {
       <div class="card-title">Time-of-Send Analyzer</div>
       <div class="card-desc">"Sent Tue 3am. Your audience opens most at Thu 10am. Reschedule next send?"</div>
       <div class="card-tactic">Tactic: Behavioral data</div>
+      <div class="card-actions"><span class="action-pill automation">⚡ Turning on automation</span><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
     <a class="card" href="mockup.html?id=7e">
@@ -484,32 +582,15 @@ body {
       <div class="card-title">Comparable-Brand Template Swap</div>
       <div class="card-desc">"Same-industry brand your size got 32% open rate with this subject. Try this approach?"</div>
       <div class="card-tactic">Tactic: Lookalike success</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span></div>
       <span class="card-arrow">→</span>
     </a>
-  </div>
-</section>
-
-<!-- ─────────── SCENARIO 8 (BONUS) ─────────── -->
-<section class="scenario">
-  <div class="scenario-header">
-    <span class="scenario-num" style="background:#fffceb;color:#a07d00">Bonus</span>
-    <h2>Beat the industry — benchmark + trajectory</h2>
-  </div>
-  <div class="scenario-barrier" style="background:#e0edff;color:#205ea3">Barrier: No reference point + low goal commitment</div>
-  <p class="scenario-sub">Cross-cutting nudge that works on top of <em>any</em> zero state. Replaces the empty widget with a peer benchmark + a visible trajectory toward beating it. Behavioral spine: social proof + curiosity gap (Loewenstein 1994), goal gradient (Hull · Duolingo), implementation intentions (Gollwitzer 1999). Steals from Klaviyo Benchmarks, Strava goal-line, Duolingo streaks.</p>
-  <div class="grid">
-    <a class="card" href="mockup.html?id=8a">
-      <div class="card-id">8.A</div>
-      <div class="card-title">Industry Benchmark Trajectory</div>
-      <div class="card-desc">Each chart shows industry median in gray, your dotted trajectory rising from below to above. Pulsing dot lands in the win zone. Streak counter and 3-send plan turn empty widgets into a beat-the-industry game.</div>
-      <div class="card-tactic">Tactic: Goal gradient + curiosity gap</div>
-      <span class="card-arrow">→</span>
-    </a>
-    <a class="card" href="mockup.html?id=8b">
-      <div class="card-id">8.B</div>
+    <a class="card" href="mockup.html?id=7f" style="border-color:#a07d00;background:linear-gradient(135deg,#fffceb,#fff8d0)">
+      <div class="card-id" style="color:#a07d00">7.F · NEW</div>
       <div class="card-title">Klaviyo-Style Benchmark Tiles + If-Then Plans</div>
       <div class="card-desc">Each metric becomes a percentile tile vs peers. Bottom-quartile metrics get a specific implementation intention ("If you send Tuesdays at 10 AM, then..."). One celebratory tile reinforces what's working.</div>
       <div class="card-tactic">Tactic: Peer comparison + implementation intentions</div>
+      <div class="card-actions"><span class="action-pill email">✉️ Sending first email</span><span class="action-pill integration">🛒 Connecting integration</span><span class="action-pill automation">⚡ Turning on automation</span></div>
       <span class="card-arrow">→</span>
     </a>
   </div>
