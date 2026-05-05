@@ -1574,8 +1574,8 @@ const MOCKUPS = {
 
   // ============= SCENARIO 6: EMPTY FILTERS =============
   '6a': {
-    title: 'Smart Filter Recovery',
-    tactic: 'Error recovery',
+    title: 'Smart Filter Recovery → Action Prompt',
+    tactic: 'Diagnostic framing + default bias',
     render: () => `
       <div class="page-content">
         <div class="filters-bar">
@@ -1583,31 +1583,81 @@ const MOCKUPS = {
           <div class="filter-group"><label class="filter-label">Comparison</label><select class="filter-select"><option>Last 31 days</option></select></div>
           <div class="filter-group"><label class="filter-label">Campaign</label><select class="filter-select"><option>All campaigns</option></select></div>
         </div>
-        <div class="banner-stripe warning">
-          <div class="banner-stripe-icon">🔍</div>
-          <div class="banner-stripe-body">
-            <strong>No campaigns found Apr 3 – May 3, 2026.</strong> But you sent <strong>4 campaigns</strong> in Jan – Mar 2026 — want to see those instead?
+
+        <div class="splash-hero" style="background:linear-gradient(135deg,#7a2828 0%,#b61a37 60%,#e56c1d 100%);padding:24px">
+          <div style="flex:1">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);color:white;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">⚠️ Diagnosis</div>
+            <h2 style="font-size:24px">This range is empty because you haven't sent in 47 days</h2>
+            <p>The filter isn't broken — your activity is. Brands your size send every <strong>8 days</strong>. We've drafted your next campaign so you can break the silence today.</p>
+            <div class="cta-row">
+              <button class="btn-yellow">Review &amp; send draft (60 sec)</button>
+              <button class="btn-white-ghost">Show Jan–Mar instead</button>
+            </div>
           </div>
-          <button class="btn-primary">View Jan – Mar</button>
-          <button class="btn-secondary">Reset all filters</button>
-        </div>
-        <div class="widget">
-          <div class="widget-header"><div><div class="widget-title">Performance over time</div><div class="widget-sub">No data for the selected range</div></div></div>
-          <canvas id="chart-6a" height="70"></canvas>
-          <div style="position:absolute"></div>
-        </div>
-        <div class="widget">
-          <div class="widget-header"><div class="widget-title">Recent campaigns (auto-detected)</div></div>
-          <div class="diagnostic-list">
-            <div class="diagnostic"><div class="diagnostic-num" style="background:var(--kale-10);color:var(--kale-100)">1</div><div class="diagnostic-body"><strong>"Holiday gift guide"</strong> · Dec 14, 2025 · 38% open rate</div></div>
-            <div class="diagnostic"><div class="diagnostic-num" style="background:var(--kale-10);color:var(--kale-100)">2</div><div class="diagnostic-body"><strong>"New year, new fixtures"</strong> · Jan 8, 2026 · 42% open rate</div></div>
-            <div class="diagnostic"><div class="diagnostic-num" style="background:var(--kale-10);color:var(--kale-100)">3</div><div class="diagnostic-body"><strong>"Valentine's collection"</strong> · Feb 9, 2026 · 35% open rate</div></div>
-            <div class="diagnostic"><div class="diagnostic-num" style="background:var(--kale-10);color:var(--kale-100)">4</div><div class="diagnostic-body"><strong>"Spring drop"</strong> · Mar 22, 2026 · 41% open rate</div></div>
+          <div style="text-align:center;color:white;flex-shrink:0">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.7;margin-bottom:4px">Days silent</div>
+            <div style="font-size:64px;font-weight:800;line-height:1;letter-spacing:-.04em">47</div>
+            <div style="font-size:11px;opacity:.7;margin-top:4px">Industry: 8 days</div>
           </div>
+        </div>
+
+        <div class="widget" style="background:linear-gradient(135deg,#f6f0ff,#ebe0ff);border-color:var(--eggplant-70);padding:20px">
+          <div class="ai-draft-eyebrow">✨ AI-drafted to break the silence</div>
+          <div class="ai-draft-subj" style="font-size:18px">Subject: It's been a minute — here's what's new at Assembly Lights</div>
+          <div class="ai-draft-meta">
+            <span><strong>To:</strong> 1,847 contacts</span>
+            <span><strong>Predicted open:</strong> 33–38% (down ~5pts from your usual due to silence)</span>
+            <span><strong>Estimated revenue:</strong> ~$340</span>
+          </div>
+          <div class="ai-draft-body" style="margin-bottom:14px">
+            Hi {{first_name}},<br><br>
+            We owe you an update — it's been a quiet stretch over here. The good news: we've been busy. <strong>Three new fixtures dropped this month</strong>, and our most-loved Aurora pendant is back in stock.<br><br>
+            <strong>[See what's new →]</strong><br><br>
+            Thanks for sticking around. Here's <strong>10% off this week</strong> with code WELCOMEBACK.
+          </div>
+          <div class="nudge-actions">
+            <button class="btn-primary">Review &amp; send</button>
+            <button class="btn-secondary">Edit draft</button>
+            <button class="btn-ghost">Regenerate</button>
+          </div>
+        </div>
+
+        <div class="widget" style="padding:20px">
+          <div class="widget-header" style="margin-bottom:8px">
+            <div>
+              <div class="widget-title" style="font-size:16px">Why every silent week costs you</div>
+              <div class="widget-sub">Open-rate decay vs days since last send · DTC home goods, ~2k list</div>
+            </div>
+          </div>
+          <canvas id="chart-6a"></canvas>
+          <div class="banner-stripe warning" style="margin-top:14px;background:var(--persimmon-10);border-color:#ffc296">
+            <div class="banner-stripe-icon">📉</div>
+            <div class="banner-stripe-body">At 47 days silent, you'll likely open at <strong>33%</strong> instead of your usual <strong>38%</strong>. Each additional week drops it ~1pt more.</div>
+          </div>
+        </div>
+
+        <div class="banner-stripe">
+          <div class="banner-stripe-icon">🗂️</div>
+          <div class="banner-stripe-body">Just looking? You sent <strong>4 campaigns Jan – Mar 2026</strong> (last activity).</div>
+          <button class="btn-secondary">View Jan – Mar instead</button>
         </div>
       </div>
     `,
-    afterRender: () => drawLineChart('chart-6a',[0,0,0,0,0,0,0,0,0,0,0,0])
+    afterRender: () => {
+      const el = document.getElementById('chart-6a');
+      if (!el) return;
+      new Chart(el.getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: ['0','7','14','21','28','35','42 (you)','49','56','63'],
+          datasets: [
+            { label:'Predicted open rate', data:[38.2,38.0,37.5,36.8,35.9,34.7,33.4,32.0,30.5,29.0], borderColor:'#b61a37', backgroundColor:'rgba(182,26,55,.1)', borderWidth:3, tension:.3, fill:true, pointRadius:(c)=>c.dataIndex===6?8:3, pointBackgroundColor:(c)=>c.dataIndex===6?'#b61a37':'#e56c1d', pointBorderColor:'#fff', pointBorderWidth:2 },
+            { label:'Industry baseline', data:[38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2], borderColor:'#b2b3b4', borderDash:[3,3], borderWidth:2, pointRadius:0, fill:false }
+          ]
+        },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{title:{display:true,text:'Days since last send',font:{size:11}},grid:{color:'#ececec'}},y:{min:25,max:42,grid:{color:'#ececec'},ticks:{callback:v=>v+'%'}}} }
+      });
+    }
   },
 
   '6b': {
