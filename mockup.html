@@ -216,6 +216,10 @@ body {
 .dwi-delta.flat { color: var(--elderberry-80); }
 
 .empty-stub { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 240px; color: var(--elderberry-90); gap: 8px; }
+
+/* Cap all chart heights so they don't dominate the page */
+canvas[id^="chart-"] { max-height: 200px !important; height: 200px !important; }
+canvas#chart-7d { max-height: 240px !important; height: 240px !important; }
 .empty-stub-title { font-size: 14px; font-weight: 600; color: var(--elderberry-100); }
 .empty-stub-text { font-size: 12px; color: var(--elderberry-90); }
 
