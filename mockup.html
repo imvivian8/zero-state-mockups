@@ -2012,6 +2012,226 @@ const MOCKUPS = {
         </div>
       </div>
     `
+  },
+
+  // ============= SCENARIO 8: BEAT THE INDUSTRY (BONUS) =============
+  '8a': {
+    title: 'Industry Benchmark Trajectory',
+    tactic: 'Social proof + goal gradient + curiosity gap',
+    render: () => `
+      <div class="page-content">
+        <div class="splash-hero" style="background:linear-gradient(135deg,#0a3a42 0%,#045c67 60%,#007c89 100%)">
+          <div style="flex:1">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,224,27,.18);border:1px solid rgba(255,224,27,.4);color:var(--cavendish);padding:4px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">⚡ Beat the industry</div>
+            <h2>You're 2 sends from the top 25%</h2>
+            <p>DTC home goods brands your size send <strong>11 campaigns/mo</strong> on average. The top 25% send <strong>14</strong>. You're at <strong>3</strong>. We mapped the path — every send below is a step toward the win zone.</p>
+            <div class="cta-row">
+              <button class="btn-yellow">Start the streak</button>
+              <button class="btn-white-ghost">See full benchmarks</button>
+            </div>
+          </div>
+          <div style="text-align:center;color:white;flex-shrink:0">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.7;margin-bottom:4px">Current streak</div>
+            <div style="font-size:64px;font-weight:800;line-height:1;letter-spacing:-.04em">0<span style="font-size:24px;opacity:.6">/7</span></div>
+            <div style="font-size:11px;opacity:.7;margin-top:4px">days with a send this week</div>
+          </div>
+        </div>
+
+        <div class="widget" style="padding:20px 24px">
+          <div class="widget-header" style="margin-bottom:8px">
+            <div>
+              <div class="widget-title">Open rate · vs DTC home goods, ~2k list</div>
+              <div class="widget-sub">Industry median in gray · Your projected trajectory in teal</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="font-size:11px;font-weight:600;color:var(--elderberry-90);display:inline-flex;align-items:center;gap:4px"><span style="width:12px;height:2px;background:var(--elderberry-70);display:inline-block"></span>Industry</span>
+              <span style="font-size:11px;font-weight:600;color:var(--kale-90);display:inline-flex;align-items:center;gap:4px"><span style="width:12px;height:2px;background:var(--kale-90);display:inline-block;border-bottom:2px dashed var(--kale-90)"></span>You</span>
+              <span style="font-size:11px;font-weight:600;color:var(--kiwi-80);display:inline-flex;align-items:center;gap:4px"><span style="width:8px;height:8px;background:var(--kiwi-80);border-radius:50%;display:inline-block"></span>Win zone</span>
+            </div>
+          </div>
+          <canvas id="chart-8a-open" height="80"></canvas>
+        </div>
+
+        <div class="stack-row">
+          <div class="widget" style="padding:20px">
+            <div class="widget-header" style="margin-bottom:6px">
+              <div><div class="widget-title" style="font-size:16px">Send cadence trajectory</div><div class="widget-sub">You vs industry, next 8 weeks</div></div>
+            </div>
+            <canvas id="chart-8a-cadence" height="80"></canvas>
+          </div>
+          <div class="widget" style="padding:20px">
+            <div class="widget-header" style="margin-bottom:6px">
+              <div><div class="widget-title" style="font-size:16px">Revenue trajectory</div><div class="widget-sub">If you stay on the path</div></div>
+            </div>
+            <canvas id="chart-8a-rev" height="80"></canvas>
+          </div>
+        </div>
+
+        <div class="widget" style="background:linear-gradient(135deg,#fffceb,#fff8d0);border-color:#f0d800;padding:20px">
+          <div style="display:flex;gap:24px;align-items:center">
+            <div style="text-align:center;flex-shrink:0">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--elderberry-100);margin-bottom:4px">Where you'll land</div>
+              <div style="font-size:42px;font-weight:800;color:var(--kale-100);letter-spacing:-.02em;line-height:1">Top 18%</div>
+              <div style="font-size:11px;color:var(--elderberry-100);margin-top:2px">of DTC home goods · 90 days</div>
+            </div>
+            <div style="width:1px;height:60px;background:#e6c800"></div>
+            <div style="flex:1">
+              <div style="font-size:14px;font-weight:700;margin-bottom:6px">🎯 Your coach: 3 sends in the next 14 days hits the median.</div>
+              <div style="font-size:13px;color:var(--elderberry-100);line-height:1.5">Each send moves your trajectory line ~5pts closer to the win zone. We've already drafted your first one — review and ship it today to start the streak.</div>
+            </div>
+            <button class="btn-primary" style="height:44px;padding:0 20px;font-size:14px;flex-shrink:0">Send #1 of 3</button>
+          </div>
+        </div>
+
+        <div class="stack-row">
+          <div style="background:white;border:1px solid var(--elderberry-40);border-radius:8px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--kiwi-10);color:var(--kiwi-80);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0">1</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:700">This week — re-engagement send</div>
+              <div style="font-size:11px;color:var(--elderberry-100)">Wakes up your 412 quiet contacts</div>
+            </div>
+            <div style="font-size:11px;font-weight:700;color:var(--kiwi-80);background:var(--kiwi-10);padding:3px 8px;border-radius:100px">Drafted ✓</div>
+          </div>
+          <div style="background:white;border:1px solid var(--elderberry-40);border-radius:8px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--elderberry-30);color:var(--elderberry-100);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0">2</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:700">Next week — product feature</div>
+              <div style="font-size:11px;color:var(--elderberry-100)">Spotlight your top-selling fixture</div>
+            </div>
+            <div style="font-size:11px;color:var(--elderberry-90)">Locked until #1 ships</div>
+          </div>
+          <div style="background:white;border:1px solid var(--elderberry-40);border-radius:8px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--elderberry-30);color:var(--elderberry-100);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0">3</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:700">Week 3 — promo</div>
+              <div style="font-size:11px;color:var(--elderberry-100)">Time-limited offer to convert quiet readers</div>
+            </div>
+            <div style="font-size:11px;color:var(--elderberry-90)">Locked</div>
+          </div>
+        </div>
+      </div>
+    `,
+    afterRender: () => drawTrajectoryCharts()
+  },
+
+  '8b': {
+    title: 'Klaviyo-Style Benchmark Tiles + Implementation Intentions',
+    tactic: 'Peer comparison + implementation intentions',
+    render: () => `
+      <div class="page-content">
+        <div class="banner-stripe success" style="background:linear-gradient(135deg,var(--kale-0),var(--kale-10));border-color:var(--kale-30);padding:14px 18px">
+          <div class="banner-stripe-icon" style="font-size:24px">📊</div>
+          <div class="banner-stripe-body">
+            <strong>Comparing you to 1,847 DTC home goods brands</strong> with 1k–5k contacts. You're behind on 3 metrics. Each card below has a one-action plan to close the gap.
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:16px">
+          <div class="widget" style="padding:20px;position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
+              <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--elderberry-90);margin-bottom:4px">Send cadence</div>
+                <div style="font-size:32px;font-weight:800;letter-spacing:-.02em">3 <span style="font-size:14px;font-weight:500;color:var(--elderberry-100)">/ month</span></div>
+              </div>
+              <div style="background:var(--watermelon-10);color:var(--watermelon-80);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.04em">Bottom 22%</div>
+            </div>
+            <div style="position:relative;height:32px;background:var(--elderberry-30);border-radius:6px;margin-bottom:8px;overflow:hidden">
+              <div style="position:absolute;left:0;top:0;bottom:0;width:22%;background:linear-gradient(90deg,var(--watermelon-80),var(--persimmon-60))"></div>
+              <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--elderberry-130)"></div>
+              <div style="position:absolute;left:50%;top:-2px;font-size:9px;font-weight:700;color:var(--elderberry-130);transform:translateX(-50%) translateY(-100%)">Industry median</div>
+              <div style="position:absolute;left:22%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:white;border:3px solid var(--watermelon-80);border-radius:50%"></div>
+              <div style="position:absolute;left:22%;bottom:-2px;font-size:9px;font-weight:700;color:var(--watermelon-80);transform:translateX(-50%) translateY(100%)">You</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--elderberry-90);margin-bottom:14px"><span>0/mo</span><span>Median: 11</span><span>Top: 18</span></div>
+            <div style="background:var(--kale-0);border:1px solid var(--kale-30);border-radius:8px;padding:12px">
+              <div style="font-size:10px;font-weight:700;color:var(--kale-90);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">🎯 If-then plan</div>
+              <div style="font-size:13px;line-height:1.5"><strong>If</strong> you send every Tuesday at 10 AM, <strong>then</strong> you'll hit the industry median in 3 weeks.</div>
+              <button class="btn-primary" style="margin-top:10px;height:30px;font-size:12px">Set the cadence</button>
+            </div>
+          </div>
+
+          <div class="widget" style="padding:20px;position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
+              <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--elderberry-90);margin-bottom:4px">Open rate</div>
+                <div style="font-size:32px;font-weight:800;letter-spacing:-.02em">31.4<span style="font-size:14px;font-weight:500;color:var(--elderberry-100)">%</span></div>
+              </div>
+              <div style="background:var(--persimmon-10);color:var(--persimmon-60);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.04em">Bottom 41%</div>
+            </div>
+            <div style="position:relative;height:32px;background:var(--elderberry-30);border-radius:6px;margin-bottom:8px;overflow:hidden">
+              <div style="position:absolute;left:0;top:0;bottom:0;width:41%;background:linear-gradient(90deg,var(--persimmon-60),#f5b97a)"></div>
+              <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--elderberry-130)"></div>
+              <div style="position:absolute;left:50%;top:-2px;font-size:9px;font-weight:700;transform:translateX(-50%) translateY(-100%)">Median: 38.2%</div>
+              <div style="position:absolute;left:41%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:white;border:3px solid var(--persimmon-60);border-radius:50%"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--elderberry-90);margin-bottom:14px"><span>15%</span><span>Median: 38.2%</span><span>Top: 52%</span></div>
+            <div style="background:var(--kale-0);border:1px solid var(--kale-30);border-radius:8px;padding:12px">
+              <div style="font-size:10px;font-weight:700;color:var(--kale-90);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">🎯 If-then plan</div>
+              <div style="font-size:13px;line-height:1.5"><strong>If</strong> you write subject lines under 35 chars with a number, <strong>then</strong> you'll add ~7pts of open rate.</div>
+              <button class="btn-primary" style="margin-top:10px;height:30px;font-size:12px">See AI-suggested subjects</button>
+            </div>
+          </div>
+
+          <div class="widget" style="padding:20px;position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
+              <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--elderberry-90);margin-bottom:4px">Click-to-purchase rate</div>
+                <div style="font-size:32px;font-weight:800;letter-spacing:-.02em">2.1<span style="font-size:14px;font-weight:500;color:var(--elderberry-100)">%</span></div>
+              </div>
+              <div style="background:var(--watermelon-10);color:var(--watermelon-80);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.04em">Bottom 28%</div>
+            </div>
+            <div style="position:relative;height:32px;background:var(--elderberry-30);border-radius:6px;margin-bottom:8px;overflow:hidden">
+              <div style="position:absolute;left:0;top:0;bottom:0;width:28%;background:linear-gradient(90deg,var(--watermelon-80),var(--persimmon-60))"></div>
+              <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--elderberry-130)"></div>
+              <div style="position:absolute;left:50%;top:-2px;font-size:9px;font-weight:700;transform:translateX(-50%) translateY(-100%)">Median: 4.7%</div>
+              <div style="position:absolute;left:28%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:white;border:3px solid var(--watermelon-80);border-radius:50%"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--elderberry-90);margin-bottom:14px"><span>0%</span><span>Median: 4.7%</span><span>Top: 8.1%</span></div>
+            <div style="background:var(--kale-0);border:1px solid var(--kale-30);border-radius:8px;padding:12px">
+              <div style="font-size:10px;font-weight:700;color:var(--kale-90);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">🎯 If-then plan</div>
+              <div style="font-size:13px;line-height:1.5"><strong>If</strong> you add SMS as a follow-up channel, <strong>then</strong> click-to-purchase typically jumps to 5.8%.</div>
+              <button class="btn-primary" style="margin-top:10px;height:30px;font-size:12px">Add SMS layer</button>
+            </div>
+          </div>
+
+          <div class="widget" style="padding:20px;position:relative;background:linear-gradient(135deg,var(--kiwi-10),#effff0);border-color:var(--kiwi-40)">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
+              <div>
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--kiwi-80);margin-bottom:4px">List growth rate</div>
+                <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;color:var(--kiwi-80)">+4.2<span style="font-size:14px;font-weight:500;color:var(--elderberry-100)">% / mo</span></div>
+              </div>
+              <div style="background:white;color:var(--kiwi-80);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.04em">Top 18% ⭐</div>
+            </div>
+            <div style="position:relative;height:32px;background:var(--elderberry-30);border-radius:6px;margin-bottom:8px;overflow:hidden">
+              <div style="position:absolute;left:0;top:0;bottom:0;width:82%;background:linear-gradient(90deg,#a8edba,var(--kiwi-80))"></div>
+              <div style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--elderberry-130)"></div>
+              <div style="position:absolute;left:50%;top:-2px;font-size:9px;font-weight:700;transform:translateX(-50%) translateY(-100%)">Median: 2.8%</div>
+              <div style="position:absolute;left:82%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:white;border:3px solid var(--kiwi-80);border-radius:50%"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--elderberry-90);margin-bottom:14px"><span>0%</span><span>Median: 2.8%</span><span>Top: 5.5%</span></div>
+            <div style="background:white;border:1px solid var(--kiwi-40);border-radius:8px;padding:12px">
+              <div style="font-size:10px;font-weight:700;color:var(--kiwi-80);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">✓ You're winning here</div>
+              <div style="font-size:13px;line-height:1.5">Don't lose this advantage — keep your signup form on every product page.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="splash-hero" style="background:linear-gradient(135deg,#0a3a42 0%,#045c67 100%);padding:24px">
+          <div style="flex:1">
+            <h2 style="font-size:22px">🏆 Beat the median in 30 days</h2>
+            <p>Following the 3 plans above takes ~45 minutes total. Brands that complete all three move from bottom-quartile to top-half within a month, on average.</p>
+            <div class="cta-row">
+              <button class="btn-yellow">Activate the 30-day plan</button>
+              <button class="btn-white-ghost">See full benchmarks</button>
+            </div>
+          </div>
+          <div style="text-align:center;color:white;flex-shrink:0">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.7;margin-bottom:4px">Goal</div>
+            <div style="font-size:48px;font-weight:800;letter-spacing:-.02em;line-height:1">Top<br>50%</div>
+          </div>
+        </div>
+      </div>
+    `
   }
 };
 
@@ -2095,10 +2315,55 @@ function drawHeatmap(id) {
   });
 }
 
+function drawTrajectoryCharts() {
+  const labels = ['Now','+1w','+2w','+3w','+4w','+5w','+6w','+7w','+8w'];
+  const industry = [38,38,38,38,38,38,38,38,38];
+  const winZone = [42,42,42,42,42,42,42,42,42];
+  const you = [22,26,30,34,37,40,43,45,46];
+
+  const openEl = document.getElementById('chart-8a-open');
+  if (openEl) {
+    new Chart(openEl.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets: [
+        { label:'Win zone (top 25%)', data:winZone, borderColor:'rgba(0,137,46,.0)', backgroundColor:'rgba(168,237,186,.35)', fill:'+1', pointRadius:0, borderWidth:0 },
+        { label:'Top 25% line', data:[52,52,52,52,52,52,52,52,52], borderColor:'rgba(0,137,46,.0)', pointRadius:0, fill:false },
+        { label:'Industry median', data:industry, borderColor:'#b2b3b4', borderWidth:2, borderDash:[2,3], pointRadius:0, fill:false, tension:0 },
+        { label:'Your trajectory', data:you, borderColor:'#007c89', backgroundColor:'rgba(0,124,137,.12)', borderWidth:3, borderDash:[6,4], tension:.4, fill:false, pointRadius:(c)=>c.dataIndex===you.length-1?7:3, pointBackgroundColor:(c)=>c.dataIndex===you.length-1?'#00892e':'#007c89', pointBorderColor:'#fff', pointBorderWidth:2 }
+      ]},
+      options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'#ececec'}},y:{min:15,max:55,grid:{color:'#ececec'},ticks:{callback:v=>v+'%'}}} }
+    });
+  }
+
+  const cadEl = document.getElementById('chart-8a-cadence');
+  if (cadEl) {
+    new Chart(cadEl.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets: [
+        { label:'Industry', data:[11,11,11,11,11,11,11,11,11], borderColor:'#b2b3b4', borderDash:[2,3], borderWidth:2, pointRadius:0, fill:false },
+        { label:'You', data:[3,4,6,8,10,11,12,13,14], borderColor:'#007c89', borderWidth:3, borderDash:[6,4], tension:.4, pointRadius:(c)=>c.dataIndex===8?7:3, pointBackgroundColor:(c)=>c.dataIndex===8?'#00892e':'#007c89', pointBorderColor:'#fff', pointBorderWidth:2, fill:false }
+      ]},
+      options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'#ececec'}},y:{min:0,max:18,grid:{color:'#ececec'},ticks:{callback:v=>v+'/mo'}}} }
+    });
+  }
+
+  const revEl = document.getElementById('chart-8a-rev');
+  if (revEl) {
+    new Chart(revEl.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets: [
+        { label:'Industry', data:[2840,2840,2840,2840,2840,2840,2840,2840,2840], borderColor:'#b2b3b4', borderDash:[2,3], borderWidth:2, pointRadius:0, fill:false },
+        { label:'You', data:[840,1100,1500,1900,2300,2700,3100,3400,3600], borderColor:'#007c89', backgroundColor:'rgba(0,124,137,.1)', borderWidth:3, borderDash:[6,4], tension:.4, pointRadius:(c)=>c.dataIndex===8?7:3, pointBackgroundColor:(c)=>c.dataIndex===8?'#00892e':'#007c89', pointBorderColor:'#fff', pointBorderWidth:2, fill:true }
+      ]},
+      options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'#ececec'}},y:{grid:{color:'#ececec'},ticks:{callback:v=>'$'+(v/1000).toFixed(1)+'k'}}} }
+    });
+  }
+}
+
 // ─────────── ROUTING ───────────
 const params = new URLSearchParams(location.search);
 const id = params.get('id') || '1a';
-const order = ['1a','1b','1c','1d','1e','2a','2b','2c','2d','2e','3a','3b','3c','3d','3e','4a','4b','4c','4d','4e','5a','5b','5c','5d','5e','6a','6b','6c','6d','6e','7a','7b','7c','7d','7e'];
+const order = ['1a','1b','1c','1d','1e','2a','2b','2c','2d','2e','3a','3b','3c','3d','3e','4a','4b','4c','4d','4e','5a','5b','5c','5d','5e','6a','6b','6c','6d','6e','7a','7b','7c','7d','7e','8a','8b'];
 const idx = order.indexOf(id);
 
 const m = MOCKUPS[id];
