@@ -469,6 +469,126 @@ canvas#chart-7d { max-height: 240px !important; height: 240px !important; }
 .big-stat .value.kale { color: var(--kale-100); }
 .big-stat .value.kiwi { color: var(--kiwi-80); }
 .big-stat .value.watermelon { color: var(--watermelon-80); }
+
+/* ─────────── REFINED MOCKUPS (R1, R2, R3) ─────────── */
+.rationale-panel {
+  background: linear-gradient(135deg, #1a1f2a 0%, #0f1521 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 0 32px 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  border: 1px solid #2a3142;
+}
+.rationale-eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--cavendish); color: var(--elderberry-130); padding: 4px 10px; border-radius: 100px; margin-bottom: 14px; }
+.rationale-title { font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 6px; }
+.rationale-sub { font-size: 13px; color: rgba(255,255,255,.65); margin-bottom: 18px; }
+.rationale-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.rationale-section h4 { font-size: 11px; font-weight: 700; color: var(--cavendish); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 10px; }
+.rationale-section ul { list-style: none; padding: 0; margin: 0; }
+.rationale-section li { font-size: 13px; line-height: 1.55; margin-bottom: 10px; padding-left: 22px; position: relative; }
+.rationale-section li::before { content: ''; position: absolute; left: 0; top: 7px; width: 12px; height: 2px; background: var(--cavendish); border-radius: 2px; }
+.rationale-section li strong { color: white; font-weight: 600; }
+.rationale-section li code { background: rgba(255,224,27,.15); color: var(--cavendish); padding: 1px 6px; border-radius: 3px; font-size: 11px; font-family: 'SF Mono', Menlo, monospace; }
+.rationale-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; background: rgba(255,224,27,.18); color: var(--cavendish); border-radius: 100px; margin-right: 4px; margin-bottom: 4px; }
+
+/* Top page-header band style — matches the screenshot */
+.refined-page-header { background: white; padding: 24px 32px 20px; border-bottom: 1px solid var(--elderberry-40); }
+.refined-page-title { font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
+.refined-page-sub { font-size: 13px; color: var(--elderberry-100); margin-top: 4px; }
+
+/* Filters bar matching screenshot — pill style */
+.refined-filters { display: flex; gap: 10px; padding: 16px 32px 0; background: var(--elderberry-20); align-items: center; flex-wrap: wrap; }
+.refined-filter-pill { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; background: white; border: 1px solid var(--elderberry-50); border-radius: 4px; font-size: 13px; font-family: var(--font); cursor: pointer; }
+.refined-filter-pill .label { font-weight: 600; color: var(--elderberry-100); }
+.refined-filter-pill .val { font-weight: 500; color: var(--elderberry-130); }
+
+/* KPI strip matching screenshot — 6 columns, icons */
+.refined-kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 0 32px; margin-top: 16px; }
+.refined-kpi { background: white; border: 1px solid var(--elderberry-40); border-radius: 8px; padding: 14px; min-height: 92px; }
+.refined-kpi-label { font-size: 11px; font-weight: 600; color: var(--elderberry-100); display: flex; align-items: center; gap: 4px; }
+.refined-kpi-icon { width: 18px; height: 18px; border-radius: 4px; background: var(--elderberry-30); color: var(--elderberry-100); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+.refined-kpi-value { font-size: 24px; font-weight: 700; margin-top: 8px; letter-spacing: -.01em; }
+.refined-kpi-delta { font-size: 11px; font-weight: 600; margin-top: 4px; display: flex; align-items: center; gap: 2px; }
+.refined-kpi-delta.up { color: var(--kiwi-80); }
+.refined-kpi-delta.down { color: var(--watermelon-80); }
+
+/* "If you sent today" trajectory KPI variant */
+.refined-kpi.projection { background: linear-gradient(135deg, var(--kale-0) 0%, #ffffff 100%); border-color: var(--kale-30); position: relative; }
+.refined-kpi.projection::after { content: 'PROJECTED'; position: absolute; top: 8px; right: 10px; font-size: 8px; font-weight: 700; letter-spacing: .08em; color: var(--kale-90); background: white; padding: 2px 6px; border-radius: 100px; border: 1px solid var(--kale-30); }
+.refined-kpi.projection .refined-kpi-value { color: var(--kale-100); }
+
+/* Win zone chart container */
+.refined-chart-widget { background: white; border: 1px solid var(--elderberry-40); border-radius: 8px; padding: 20px 24px; margin: 16px 32px 0; }
+.refined-chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.refined-chart-title { font-size: 16px; font-weight: 700; letter-spacing: -.01em; display: flex; align-items: center; gap: 8px; }
+.refined-chart-pill { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; background: var(--cavendish); color: var(--elderberry-130); border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+.refined-chart-tabs { display: inline-flex; gap: 0; background: var(--elderberry-30); border-radius: 4px; padding: 2px; font-size: 11px; font-weight: 600; }
+.refined-chart-tabs span { padding: 4px 10px; color: var(--elderberry-100); border-radius: 3px; cursor: pointer; }
+.refined-chart-tabs span.active { background: white; color: var(--elderberry-130); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+.refined-chart-canvas-wrap { position: relative; padding-top: 12px; }
+.refined-chart-legend { display: flex; gap: 18px; justify-content: center; margin-top: 12px; font-size: 11px; color: var(--elderberry-100); flex-wrap: wrap; }
+.refined-chart-legend .item { display: flex; align-items: center; gap: 6px; }
+.refined-chart-legend .item .swatch { width: 12px; height: 3px; border-radius: 2px; }
+.refined-chart-legend .item .swatch.dashed { border-top: 2px dashed var(--elderberry-100); height: 0; }
+
+/* Streak / win-zone callout */
+.streak-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin: 16px 32px 0; }
+.streak-card { background: linear-gradient(135deg, #fffceb 0%, #fff8d0 100%); border: 1px solid #f0d800; border-radius: 12px; padding: 20px 24px; }
+.streak-card h3 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 4px; }
+.streak-card p { font-size: 13px; color: var(--elderberry-100); line-height: 1.5; margin-bottom: 14px; }
+.streak-dots { display: flex; gap: 8px; margin-bottom: 14px; align-items: center; }
+.streak-dot { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,.6); border: 2px dashed var(--elderberry-50); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--elderberry-90); }
+.streak-dot.next { background: var(--cavendish); border: 2px solid #e6c800; color: var(--elderberry-130); animation: streakPulse 2s infinite; }
+@keyframes streakPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,224,27,.6);} 50% { box-shadow: 0 0 0 8px rgba(255,224,27,0);} }
+.streak-arrow { color: var(--elderberry-80); font-size: 14px; }
+
+.winzone-card { background: linear-gradient(135deg, var(--kiwi-10) 0%, #effff0 100%); border: 1px solid var(--kiwi-40); border-radius: 12px; padding: 20px 24px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.winzone-eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--kiwi-80); margin-bottom: 6px; }
+.winzone-value { font-size: 36px; font-weight: 800; color: var(--kiwi-80); letter-spacing: -.03em; line-height: 1; }
+.winzone-sub { font-size: 11px; color: var(--elderberry-100); margin-top: 6px; }
+
+/* SMS comparison row */
+.sms-compare-row { margin: 16px 32px 0; background: linear-gradient(135deg, #faf6ff 0%, #f0e8ff 100%); border: 1px solid var(--eggplant-50); border-radius: 12px; padding: 22px 24px; }
+.sms-compare-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.sms-compare-head h3 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+.sms-compare-head p { font-size: 13px; color: var(--elderberry-100); line-height: 1.5; max-width: 540px; }
+.sms-compare-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.sms-compare-col { background: white; border-radius: 8px; padding: 16px; border: 1px solid var(--elderberry-40); }
+.sms-compare-col.you { border: 1px solid #ffaaba; background: linear-gradient(135deg,#fff5f6 0%, #ffe7e7 100%); }
+.sms-compare-col.industry { border: 1px solid var(--eggplant-50); }
+.sms-compare-col h5 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--elderberry-90); margin-bottom: 6px; }
+.sms-compare-col .num { font-size: 26px; font-weight: 700; letter-spacing: -.02em; }
+.sms-compare-col .num.you-color { color: var(--watermelon-80); }
+.sms-compare-col .num.industry-color { color: var(--eggplant-70); }
+.sms-compare-col .num.gap-color { color: var(--kiwi-80); }
+.sms-compare-col .footnote { font-size: 11px; color: var(--elderberry-100); margin-top: 6px; line-height: 1.4; }
+
+/* Section divider */
+.section-band { margin: 24px 32px 8px; padding-bottom: 8px; border-bottom: 1px solid var(--elderberry-40); display: flex; justify-content: space-between; align-items: baseline; }
+.section-band h2 { font-size: 14px; font-weight: 700; letter-spacing: -.01em; }
+.section-band .sub { font-size: 11px; color: var(--elderberry-90); }
+
+/* Marketing conversions widget for R2 */
+.marketing-conv-stub { background: white; border: 1px dashed var(--elderberry-50); border-radius: 8px; margin: 0 32px 24px; padding: 32px; text-align: center; }
+
+/* R3 — sending consistency */
+.consistency-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; margin: 16px 32px 0; }
+.consistency-card { background: white; border: 1px solid var(--elderberry-40); border-radius: 8px; padding: 20px 24px; }
+.consistency-card.warn { background: linear-gradient(135deg, var(--watermelon-10) 0%, #fff5f6 100%); border-color: #ffaaba; }
+.consistency-card h3 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 4px; }
+.cadence-bar-row { display: flex; gap: 20px; align-items: flex-end; margin-top: 12px; }
+.cadence-bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.cadence-bar-bg { width: 100%; height: 110px; background: var(--elderberry-30); border-radius: 6px; position: relative; overflow: hidden; }
+.cadence-bar-fill { position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0 0 6px 6px; }
+.cadence-bar-fill.you { background: var(--watermelon-80); height: 11%; }
+.cadence-bar-fill.industry { background: var(--eggplant-70); height: 75%; }
+.cadence-bar-fill.top { background: var(--kiwi-80); height: 100%; }
+.cadence-bar-label { font-size: 11px; font-weight: 600; color: var(--elderberry-100); text-align: center; }
+.cadence-bar-num { font-size: 18px; font-weight: 700; }
+.cadence-bar-num.you { color: var(--watermelon-80); }
+.cadence-bar-num.industry { color: var(--eggplant-70); }
+.cadence-bar-num.top { color: var(--kiwi-80); }
 </style>
 </head>
 <body>
@@ -547,6 +667,473 @@ canvas#chart-7d { max-height: 240px !important; height: 240px !important; }
 <script>
 // ─────────── MOCKUP DEFINITIONS ───────────
 const MOCKUPS = {
+
+  // =====================================================
+  // ✨ REFINED FINALISTS (R1, R2, R3)
+  // =====================================================
+
+  'r1': {
+    title: 'Industry-Benchmarked Sample Dashboard + Trajectory + SMS Lift',
+    tactic: 'Goal visualization · Forecast trajectory · Win-zone streak · SMS gap framing',
+    render: () => `
+      <div class="rationale-panel">
+        <div class="rationale-eyebrow">✨ Refined finalist · R1</div>
+        <div class="rationale-title">Show the user the dashboard they could have — built on their industry's data</div>
+        <div class="rationale-sub">Triggers when: User has audience set up but hasn't sent campaigns yet. Their dashboard is empty / 0s. We use their self-reported industry to render an aspirational, fully-lit-up version of the same dashboard, with their projected trajectory if they send today, and a SMS gap callout.</div>
+        <div class="rationale-grid">
+          <div class="rationale-section">
+            <h4>What this combines</h4>
+            <ul>
+              <li><span class="rationale-tag">1A</span> <strong>Lit-up sample dashboard</strong> using industry benchmarks. Users self-report industry at signup, so we already have what we need.</li>
+              <li><span class="rationale-tag">2B</span> <strong>"What if you sent today" forecast</strong> — chart fills in with projected opens, clicks, revenue based on list size × industry conversion.</li>
+              <li><span class="rationale-tag">2F</span> <strong>Win-zone + streak goals</strong> — show where they'd land with 1, 2, 3 sends. Pulsing dot = next send to start the streak.</li>
+              <li><span class="rationale-tag">3B</span> <strong>SMS gap callout</strong> — for industry peers who use email + SMS, show the lift. Frame the user as "behind the industry" and offer a 1-click setup entry point.</li>
+            </ul>
+          </div>
+          <div class="rationale-section">
+            <h4>Why this works</h4>
+            <ul>
+              <li><strong>Goal visualization</strong> (Locke 1990) — seeing the destination converts intent better than abstract CTAs.</li>
+              <li><strong>Curiosity gap</strong> (Loewenstein 1994) — the gap between "0%" and "what's possible" is what motivates the click.</li>
+              <li><strong>Implementation intentions</strong> (Gollwitzer 1999) — the streak makes the next concrete step ("send #1 of 3") obvious and time-bound.</li>
+              <li><strong>Loss aversion + social proof</strong> — "stores like yours add $2,400/mo with SMS" is a peer-gap, not a feature pitch.</li>
+              <li><strong>Cheap to ship</strong> — industry data already exists. Forecasts are simple list-size × benchmark math.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="refined-page-header">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between">
+          <div>
+            <div class="refined-page-title">Marketing dashboard <span style="font-size:13px;font-weight:600;background:var(--cavendish);color:var(--elderberry-130);padding:3px 10px;border-radius:100px;letter-spacing:.04em;text-transform:uppercase;vertical-align:6px;margin-left:8px">Industry sample</span></div>
+            <div class="refined-page-sub">How your email and SMS marketing could perform — based on <strong>DTC home goods brands with ~5k contacts</strong></div>
+          </div>
+          <button class="btn-primary" style="height:36px">✨ Send your first campaign</button>
+        </div>
+      </div>
+
+      <div class="refined-filters">
+        <button class="refined-filter-pill"><span class="label">📅 Date</span><span class="val">Last 90 days</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">📡 Channel</span><span class="val">All</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">👥 Audience</span><span class="val">All contacts</span> ▾</button>
+      </div>
+
+      <div class="refined-kpis">
+        <div class="refined-kpi"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>Attributed revenue</div><div class="refined-kpi-value">$0</div><div class="refined-kpi-delta down">— You haven't sent yet</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>If you sent today</div><div class="refined-kpi-value">~$1,840</div><div class="refined-kpi-delta up">▲ Per send · industry avg</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">#</span>Projected orders</div><div class="refined-kpi-value">~14</div><div class="refined-kpi-delta up">▲ From 1 send</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">⌀</span>Industry AOV</div><div class="refined-kpi-value">$129</div><div class="refined-kpi-delta flat">DTC home goods</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">%</span>Industry open rate</div><div class="refined-kpi-value">38.2%</div><div class="refined-kpi-delta up">Top quartile: 46%</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>Rev / recipient</div><div class="refined-kpi-value">$2.84</div><div class="refined-kpi-delta up">Industry avg</div></div>
+      </div>
+
+      <div class="refined-chart-widget">
+        <div class="refined-chart-header">
+          <div>
+            <div class="refined-chart-title">📈 Your projected trajectory <span class="refined-chart-pill">WIN ZONE</span></div>
+            <div style="font-size:11px;color:var(--elderberry-100);margin-top:4px">If you send weekly · industry median in gray · top-quartile zone in green</div>
+          </div>
+          <div class="refined-chart-tabs"><span>Day</span><span class="active">Week</span><span>Month</span></div>
+        </div>
+        <div class="refined-chart-canvas-wrap">
+          <canvas id="chart-r1-traj"></canvas>
+        </div>
+        <div class="refined-chart-legend">
+          <span class="item"><span class="swatch" style="background:#b2b3b4"></span>Industry median</span>
+          <span class="item"><span class="swatch" style="background:#a8edba"></span>Top-quartile zone</span>
+          <span class="item"><span class="swatch" style="background:#007c89;border-top:2px dashed #007c89"></span>Your projected (if you send)</span>
+          <span class="item"><span class="swatch" style="background:var(--watermelon-80)"></span>You today</span>
+        </div>
+      </div>
+
+      <div class="streak-row">
+        <div class="streak-card">
+          <h3>🔥 Start your streak — 3 sends to get into the win zone</h3>
+          <p>Brands like yours land in the top 25% (the green zone above) after just 3 consistent weekly sends. Your first send unlocks the chart. Second send adds your real data points. Third send proves the pattern.</p>
+          <div class="streak-dots">
+            <div class="streak-dot next">1</div>
+            <span class="streak-arrow">→</span>
+            <div class="streak-dot">2</div>
+            <span class="streak-arrow">→</span>
+            <div class="streak-dot">3</div>
+            <span class="streak-arrow">→</span>
+            <span style="font-size:13px;font-weight:700;color:var(--kiwi-80)">🏆 Win zone</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn-primary">✨ Send #1 — AI-drafted in 60s</button>
+            <button class="btn-secondary">Pick from templates</button>
+          </div>
+        </div>
+        <div class="winzone-card">
+          <div class="winzone-eyebrow">If you send 3 sends</div>
+          <div class="winzone-value">+$5,520</div>
+          <div class="winzone-sub">Projected revenue · ~$1,840 per send × 3 sends · industry-benchmarked</div>
+        </div>
+      </div>
+
+      <div class="section-band">
+        <h2>📡 Channel mix opportunity</h2>
+        <span class="sub">Where you stand vs. industry peers</span>
+      </div>
+
+      <div class="sms-compare-row">
+        <div class="sms-compare-head">
+          <div>
+            <h3>📱 You're behind the industry — 67% of DTC home brands your size also use SMS</h3>
+            <p>Email-only brands earn ~$2,840/mo. Brands using <strong>email + SMS</strong> earn ~$5,240/mo from the same list size — that's an extra <strong>$2,400/mo</strong> you're leaving on the table. SMS opens at 98% (vs 38% email).</p>
+          </div>
+          <button class="btn-primary" style="background:var(--eggplant-70);height:36px;flex-shrink:0">📱 Set up SMS in 15 min</button>
+        </div>
+        <div class="sms-compare-cols">
+          <div class="sms-compare-col you">
+            <h5>🐵 You today</h5>
+            <div class="num you-color">Email only</div>
+            <div class="footnote">No SMS set up. Earning ~$2,840/mo (potential)</div>
+          </div>
+          <div class="sms-compare-col industry">
+            <h5>🏆 Industry peers (email + SMS)</h5>
+            <div class="num industry-color">$5,240<span style="font-size:14px;color:var(--elderberry-100);font-weight:500">/mo</span></div>
+            <div class="footnote">DTC home goods brands your size, last 90d avg</div>
+          </div>
+          <div class="sms-compare-col" style="border-color:var(--kiwi-40);background:linear-gradient(135deg,#effff0,var(--kiwi-10))">
+            <h5>💰 Your gap</h5>
+            <div class="num gap-color">+$2,400<span style="font-size:14px;color:var(--elderberry-100);font-weight:500">/mo</span></div>
+            <div class="footnote">If you add SMS to email · ~85% revenue lift</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:24px"></div>
+    `,
+    afterRender: () => drawR1Trajectory()
+  },
+
+  'r2': {
+    title: 'Industry-Benchmarked Dashboard — No Store Connected',
+    tactic: 'Same as R1 + ghost Marketing Conversions widget for non-ECU users',
+    render: () => `
+      <div class="rationale-panel">
+        <div class="rationale-eyebrow">✨ Refined finalist · R2 (extends R1)</div>
+        <div class="rationale-title">Same as R1, but for users who haven't connected their ecomm store</div>
+        <div class="rationale-sub">Triggers when: User has audience set up, hasn't sent campaigns, AND hasn't connected Shopify/Woo/etc. Today we hide the Marketing Conversions widget entirely — meaning they don't even know they're missing revenue tracking. R2 keeps the widget visible as a "ghost" with projected revenue, and adds a one-click integration entry point.</div>
+        <div class="rationale-grid">
+          <div class="rationale-section">
+            <h4>What this adds on top of R1</h4>
+            <ul>
+              <li><span class="rationale-tag">4B</span> <strong>Live revenue calculator in the Marketing Conversions widget</strong> — shows the user a personalized estimate ("Your 1,847 contacts × industry conversion = ~$2,840/mo in tracked revenue you can't see today").</li>
+              <li>Persistent <strong>"Connect store"</strong> CTA inside the ghosted widget so the curiosity gap converts into action.</li>
+              <li>Auto-detection: if we can tell from their domain or signup metadata that they use Shopify, we say so explicitly to remove the "which integration?" decision.</li>
+            </ul>
+          </div>
+          <div class="rationale-section">
+            <h4>Why this works</h4>
+            <ul>
+              <li><strong>Invisible loss is the silent killer</strong> — users can't act on what they can't see. Showing the widget shape makes the missing data tangible.</li>
+              <li><strong>Loss quantification</strong> — concrete dollars ($2,840/mo) outperform abstract benefits ("track ROI") in every test we've run.</li>
+              <li><strong>Decision elimination</strong> — pre-detecting Shopify removes the "which integration?" choice paralysis.</li>
+              <li><strong>Compounds with R1's wins</strong> — once they ship their first send, the empty Marketing Conversions widget becomes the next obvious gap to close.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="refined-page-header">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between">
+          <div>
+            <div class="refined-page-title">Marketing dashboard <span style="font-size:13px;font-weight:600;background:var(--cavendish);color:var(--elderberry-130);padding:3px 10px;border-radius:100px;letter-spacing:.04em;text-transform:uppercase;vertical-align:6px;margin-left:8px">Industry sample</span></div>
+            <div class="refined-page-sub">How your email and SMS marketing could perform — based on <strong>DTC home goods brands with ~5k contacts</strong></div>
+          </div>
+          <button class="btn-primary" style="height:36px">✨ Send your first campaign</button>
+        </div>
+      </div>
+
+      <div class="refined-filters">
+        <button class="refined-filter-pill"><span class="label">📅 Date</span><span class="val">Last 90 days</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">📡 Channel</span><span class="val">All</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">👥 Audience</span><span class="val">All contacts</span> ▾</button>
+      </div>
+
+      <div class="refined-kpis">
+        <div class="refined-kpi"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>Attributed revenue</div><div class="refined-kpi-value">$0</div><div class="refined-kpi-delta down">— No store connected</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>If you sent today</div><div class="refined-kpi-value">~$1,840</div><div class="refined-kpi-delta up">▲ Per send · industry avg</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">#</span>Projected orders</div><div class="refined-kpi-value">~14</div><div class="refined-kpi-delta up">▲ From 1 send</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">⌀</span>Industry AOV</div><div class="refined-kpi-value">$129</div><div class="refined-kpi-delta flat">DTC home goods</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">%</span>Industry open rate</div><div class="refined-kpi-value">38.2%</div><div class="refined-kpi-delta up">Top quartile: 46%</div></div>
+        <div class="refined-kpi projection"><div class="refined-kpi-label"><span class="refined-kpi-icon">$</span>Rev / recipient</div><div class="refined-kpi-value">$2.84</div><div class="refined-kpi-delta up">Industry avg</div></div>
+      </div>
+
+      <div class="refined-chart-widget">
+        <div class="refined-chart-header">
+          <div>
+            <div class="refined-chart-title">📈 Your projected trajectory <span class="refined-chart-pill">WIN ZONE</span></div>
+            <div style="font-size:11px;color:var(--elderberry-100);margin-top:4px">If you send weekly · industry median in gray · top-quartile zone in green</div>
+          </div>
+          <div class="refined-chart-tabs"><span>Day</span><span class="active">Week</span><span>Month</span></div>
+        </div>
+        <div class="refined-chart-canvas-wrap">
+          <canvas id="chart-r2-traj"></canvas>
+        </div>
+        <div class="refined-chart-legend">
+          <span class="item"><span class="swatch" style="background:#b2b3b4"></span>Industry median</span>
+          <span class="item"><span class="swatch" style="background:#a8edba"></span>Top-quartile zone</span>
+          <span class="item"><span class="swatch" style="background:#007c89"></span>Your projected (if you send)</span>
+          <span class="item"><span class="swatch" style="background:var(--watermelon-80)"></span>You today</span>
+        </div>
+      </div>
+
+      <div class="section-band">
+        <h2>💰 Marketing conversions</h2>
+        <span class="sub">Revenue attributed to your campaigns</span>
+      </div>
+
+      <div class="refined-chart-widget" style="position:relative;background:linear-gradient(135deg,var(--kale-0) 0%,#ffffff 100%);border-color:var(--kale-30)">
+        <div class="refined-chart-header">
+          <div>
+            <div class="refined-chart-title">💰 Revenue you can't see today <span class="refined-chart-pill" style="background:var(--kale-90);color:white">CONNECT TO UNLOCK</span></div>
+            <div style="font-size:11px;color:var(--elderberry-100);margin-top:4px">Estimated based on your <strong>1,847 contacts</strong> × DTC home goods conversion benchmarks</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center;padding:20px 0 8px">
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--kale-100);margin-bottom:6px">Estimated tracked revenue you're missing</div>
+            <div style="font-size:48px;font-weight:800;color:var(--kale-100);letter-spacing:-.03em;line-height:1">~$2,840<span style="font-size:18px;color:var(--elderberry-100);font-weight:500">/mo</span></div>
+            <div style="font-size:12px;color:var(--elderberry-100);margin-top:8px;line-height:1.5">
+              <strong>How we calculated this:</strong><br>
+              1,847 contacts × 38% open × 4.7% click = 33 clicks<br>
+              33 clicks × 12% conversion × $86 AOV × 8 sends/mo = <strong>$2,752–$2,920/mo</strong>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <div style="background:white;border:1px solid var(--kale-30);border-radius:12px;padding:18px;display:inline-block;box-shadow:0 4px 12px rgba(0,124,137,.08)">
+              <div style="font-size:11px;font-weight:700;color:var(--kiwi-80);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">✓ Detected on assemblylights.com</div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+                <div style="width:40px;height:40px;background:#96bf48;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px">S</div>
+                <div style="text-align:left">
+                  <div style="font-size:14px;font-weight:700">Shopify</div>
+                  <div style="font-size:11px;color:var(--elderberry-100)">2-click OAuth · ~30 sec</div>
+                </div>
+              </div>
+              <button class="btn-primary" style="width:100%">Connect Shopify</button>
+              <button class="btn-ghost" style="width:100%;margin-top:6px;height:28px;font-size:11px">Use a different platform</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="streak-row">
+        <div class="streak-card">
+          <h3>🔥 Start your streak — 3 sends to get into the win zone</h3>
+          <p>Brands like yours land in the top 25% (the green zone above) after just 3 consistent weekly sends.</p>
+          <div class="streak-dots">
+            <div class="streak-dot next">1</div>
+            <span class="streak-arrow">→</span>
+            <div class="streak-dot">2</div>
+            <span class="streak-arrow">→</span>
+            <div class="streak-dot">3</div>
+            <span class="streak-arrow">→</span>
+            <span style="font-size:13px;font-weight:700;color:var(--kiwi-80)">🏆 Win zone</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn-primary">✨ Send #1 — AI-drafted in 60s</button>
+            <button class="btn-secondary">Pick from templates</button>
+          </div>
+        </div>
+        <div class="winzone-card">
+          <div class="winzone-eyebrow">If you send 3 sends</div>
+          <div class="winzone-value">+$5,520</div>
+          <div class="winzone-sub">Projected revenue · ~$1,840 per send × 3 sends · industry-benchmarked</div>
+        </div>
+      </div>
+
+      <div class="section-band">
+        <h2>📡 Channel mix opportunity</h2>
+        <span class="sub">Where you stand vs. industry peers</span>
+      </div>
+
+      <div class="sms-compare-row">
+        <div class="sms-compare-head">
+          <div>
+            <h3>📱 You're behind the industry — 67% of DTC home brands your size also use SMS</h3>
+            <p>Email-only brands earn ~$2,840/mo. Brands using <strong>email + SMS</strong> earn ~$5,240/mo from the same list size — that's an extra <strong>$2,400/mo</strong> you're leaving on the table. SMS opens at 98% (vs 38% email).</p>
+          </div>
+          <button class="btn-primary" style="background:var(--eggplant-70);height:36px;flex-shrink:0">📱 Set up SMS in 15 min</button>
+        </div>
+        <div class="sms-compare-cols">
+          <div class="sms-compare-col you">
+            <h5>🐵 You today</h5>
+            <div class="num you-color">Email only</div>
+            <div class="footnote">No SMS set up. Earning ~$2,840/mo (potential)</div>
+          </div>
+          <div class="sms-compare-col industry">
+            <h5>🏆 Industry peers (email + SMS)</h5>
+            <div class="num industry-color">$5,240<span style="font-size:14px;color:var(--elderberry-100);font-weight:500">/mo</span></div>
+            <div class="footnote">DTC home goods brands your size, last 90d avg</div>
+          </div>
+          <div class="sms-compare-col" style="border-color:var(--kiwi-40);background:linear-gradient(135deg,#effff0,var(--kiwi-10))">
+            <h5>💰 Your gap</h5>
+            <div class="num gap-color">+$2,400<span style="font-size:14px;color:var(--elderberry-100);font-weight:500">/mo</span></div>
+            <div class="footnote">If you add SMS to email · ~85% revenue lift</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:24px"></div>
+    `,
+    afterRender: () => drawR2Trajectory()
+  },
+
+  'r3': {
+    title: 'Empty Filters → Sending Cadence Diagnosis vs Industry',
+    tactic: 'Reframe empty filter as cadence gap · Industry benchmark + diagnosis combined',
+    render: () => `
+      <div class="rationale-panel">
+        <div class="rationale-eyebrow">✨ Refined finalist · R3</div>
+        <div class="rationale-title">Filter returns no data → that's a sending gap, not a filter problem</div>
+        <div class="rationale-sub">Triggers when: User picks a date/channel/audience filter combo that excludes all their campaigns. Today they hit a wall ("no data available"). R3 reframes the empty filter as a <strong>cadence diagnosis</strong>: if filters return nothing, chances are they're not sending consistently. Show how peers in their industry send consistently — and propose a one-click action to close the gap.</div>
+        <div class="rationale-grid">
+          <div class="rationale-section">
+            <h4>What this combines</h4>
+            <ul>
+              <li><span class="rationale-tag">6C</span> <strong>Benchmark fallback</strong> — when their data is empty for the period, fill the dashboard with industry benchmarks for the same period instead of showing "no data."</li>
+              <li><span class="rationale-tag">6D</span> <strong>Cadence diagnosis</strong> — "Your last send was 47 days ago. Brands your size send every 8 days." Frames the gap concretely with the open-rate decay risk.</li>
+              <li><strong>New: cadence-comparison chart</strong> — visualizes you vs. industry median vs. top-quartile send frequency. Makes the gap unmissable.</li>
+              <li><strong>AI-drafted re-engagement campaign</strong> — pre-built so the next action is one click, not a blank editor.</li>
+            </ul>
+          </div>
+          <div class="rationale-section">
+            <h4>Why this works</h4>
+            <ul>
+              <li><strong>Diagnostic framing</strong> beats redirect framing — "your range is empty because you haven't sent in 47 days" is actionable; "view Jan–Mar instead" is a punt.</li>
+              <li><strong>Anchoring</strong> (Tversky &amp; Kahneman 1974) — industry benchmarks set the "should be" so the user's number feels low.</li>
+              <li><strong>Loss aversion</strong> — open rate decays 3% per 30 silent days. Showing the curve makes silence costly.</li>
+              <li><strong>Default bias</strong> — pre-drafted re-engagement campaign collapses the action from 10 steps to 1 click.</li>
+              <li><strong>Filter recovery is demoted to a footer</strong> — still available, but never the headline.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="refined-page-header">
+        <div>
+          <div class="refined-page-title">Marketing dashboard</div>
+          <div class="refined-page-sub">How your email and SMS marketing is performing</div>
+        </div>
+      </div>
+
+      <div class="refined-filters">
+        <button class="refined-filter-pill"><span class="label">📅 Date</span><span class="val" style="color:var(--watermelon-80)">Apr 3 – May 3, 2026</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">📡 Channel</span><span class="val">All</span> ▾</button>
+        <button class="refined-filter-pill"><span class="label">👥 Audience</span><span class="val">All contacts</span> ▾</button>
+        <span style="font-size:11px;color:var(--watermelon-80);font-weight:600;margin-left:6px">⚠ Your filter excludes all your campaigns</span>
+      </div>
+
+      <div style="margin:16px 32px 0">
+        <div class="splash-hero" style="background:linear-gradient(135deg,#7a2828 0%,#b61a37 60%,#e56c1d 100%);padding:24px;border-radius:12px;color:white;display:flex;gap:24px;align-items:center">
+          <div style="flex:1">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:4px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">⚠ Diagnosis</div>
+            <h2 style="font-size:24px;font-weight:700;letter-spacing:-.02em">This range is empty because you haven't sent in 47 days</h2>
+            <p style="font-size:14px;opacity:.92;line-height:1.5;max-width:560px;margin-top:6px">The filter isn't broken — your activity is. Brands your size send every <strong>8 days</strong>. Below: how peers in your industry send consistently, and what your last 47 silent days are costing you.</p>
+            <div style="display:flex;gap:8px;margin-top:14px">
+              <button class="btn-yellow" style="background:var(--cavendish);color:var(--elderberry-130);border:none;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13px;cursor:pointer">✨ Review &amp; send draft (60 sec)</button>
+              <button style="background:transparent;color:white;border:1px solid rgba(255,255,255,.4);padding:10px 18px;border-radius:4px;font-weight:600;font-size:13px;cursor:pointer">Show Jan – Mar instead</button>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.7;margin-bottom:4px">Days silent</div>
+            <div style="font-size:64px;font-weight:800;line-height:1;letter-spacing:-.04em">47</div>
+            <div style="font-size:11px;opacity:.7;margin-top:4px">Industry: 8 days</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-band">
+        <h2>📊 Industry benchmarks for this period</h2>
+        <span class="sub">Apr 3 – May 3, 2026 · DTC home goods · ~5k-list size</span>
+      </div>
+
+      <div class="refined-kpis">
+        <div class="refined-kpi" style="background:linear-gradient(135deg,var(--watermelon-10),#fff5f6);border-color:#ffaaba"><div class="refined-kpi-label" style="color:var(--watermelon-80)">🐵 You this period</div><div class="refined-kpi-value" style="color:var(--watermelon-80)">0</div><div class="refined-kpi-delta down">No campaigns sent</div></div>
+        <div class="refined-kpi"><div class="refined-kpi-label">Industry avg sends</div><div class="refined-kpi-value">11</div><div class="refined-kpi-delta flat">Stores your size</div></div>
+        <div class="refined-kpi"><div class="refined-kpi-label">Industry open rate</div><div class="refined-kpi-value">38.2%</div><div class="refined-kpi-delta flat">Same period</div></div>
+        <div class="refined-kpi"><div class="refined-kpi-label">Industry click rate</div><div class="refined-kpi-value">4.7%</div><div class="refined-kpi-delta flat">Same period</div></div>
+        <div class="refined-kpi"><div class="refined-kpi-label">Industry avg revenue</div><div class="refined-kpi-value">$2,840</div><div class="refined-kpi-delta flat">Tracked from email</div></div>
+        <div class="refined-kpi" style="background:linear-gradient(135deg,var(--kiwi-10),#effff0);border-color:var(--kiwi-40)"><div class="refined-kpi-label" style="color:var(--kiwi-80)">💰 Your gap</div><div class="refined-kpi-value" style="color:var(--kiwi-80)">~$2,840</div><div class="refined-kpi-delta up">Recoverable</div></div>
+      </div>
+
+      <div class="consistency-row">
+        <div class="consistency-card warn">
+          <h3>📅 You vs. industry · weekly send cadence</h3>
+          <p style="font-size:12px;color:var(--elderberry-100);margin-top:4px">Number of campaigns sent in the last 90 days · DTC home goods, ~5k contacts</p>
+          <div class="cadence-bar-row">
+            <div class="cadence-bar-col">
+              <div class="cadence-bar-num you">1</div>
+              <div class="cadence-bar-bg"><div class="cadence-bar-fill you"></div></div>
+              <div class="cadence-bar-label">🐵 You</div>
+            </div>
+            <div class="cadence-bar-col">
+              <div class="cadence-bar-num industry">11</div>
+              <div class="cadence-bar-bg"><div class="cadence-bar-fill industry"></div></div>
+              <div class="cadence-bar-label">Industry median</div>
+            </div>
+            <div class="cadence-bar-col">
+              <div class="cadence-bar-num top">16</div>
+              <div class="cadence-bar-bg"><div class="cadence-bar-fill top"></div></div>
+              <div class="cadence-bar-label">🏆 Top quartile</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding:12px 14px;background:white;border-radius:6px;border:1px solid #ffaaba;font-size:12px;line-height:1.5">
+            <strong style="color:var(--watermelon-80)">You're 10 sends behind industry median this period.</strong> Catching up to even half the gap (~5 sends) would generate ~$1,400 in revenue based on benchmarks above.
+          </div>
+        </div>
+        <div class="refined-chart-widget" style="margin:0">
+          <div class="refined-chart-header" style="margin-bottom:0">
+            <div>
+              <div class="refined-chart-title" style="font-size:14px">📉 Open-rate decay risk</div>
+              <div style="font-size:11px;color:var(--elderberry-100);margin-top:2px">Open rate vs days silent</div>
+            </div>
+          </div>
+          <div class="refined-chart-canvas-wrap">
+            <canvas id="chart-r3-decay"></canvas>
+          </div>
+          <div style="font-size:11px;color:var(--watermelon-80);font-weight:600;margin-top:6px">⚠ At 47 days silent, you'll likely open at 33% (vs your usual 38%)</div>
+        </div>
+      </div>
+
+      <div style="margin:16px 32px 0">
+        <div class="widget" style="background:linear-gradient(135deg,#f6f0ff,#ebe0ff);border-color:var(--eggplant-70)">
+          <div class="ai-draft-eyebrow">✨ AI-drafted to break the silence</div>
+          <div class="ai-draft-subj" style="font-size:18px">Subject: It's been a minute — here's what's new at Assembly Lights</div>
+          <div class="ai-draft-meta">
+            <span><strong>To:</strong> 1,847 contacts</span>
+            <span><strong>Predicted open:</strong> 33–38%</span>
+            <span><strong>Estimated revenue:</strong> ~$340</span>
+          </div>
+          <div class="ai-draft-body">
+            Hi {{first_name}},<br><br>
+            We owe you an update — it's been a quiet stretch over here. The good news: we've been busy. <strong>Three new fixtures dropped this month</strong>, and our most-loved Aurora pendant is back in stock.<br><br>
+            <strong>[See what's new →]</strong><br><br>
+            Thanks for sticking around. Here's <strong>10% off this week</strong> with code WELCOMEBACK.
+          </div>
+          <div class="nudge-actions">
+            <button class="btn-primary">Review &amp; send</button>
+            <button class="btn-secondary">Edit draft</button>
+            <button class="btn-ghost">Regenerate</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:16px 32px 24px">
+        <div class="banner-stripe">
+          <div class="banner-stripe-icon">🗂️</div>
+          <div class="banner-stripe-body">Just looking? You sent <strong>4 campaigns Jan – Mar 2026</strong> (last activity).</div>
+          <button class="btn-secondary">View Jan – Mar instead</button>
+        </div>
+      </div>
+    `,
+    afterRender: () => drawR3Decay()
+  },
+
   // ============= SCENARIO 1: NO AUDIENCE =============
   '1a': {
     title: 'ICP Sample Dashboard',
@@ -2417,7 +3004,44 @@ function drawTrajectoryCharts() {
 // ─────────── ROUTING ───────────
 const params = new URLSearchParams(location.search);
 const id = params.get('id') || '1a';
-const order = ['1a','1b','1c','1d','1e','2a','2b','2c','2d','2e','2f','3a','3b','3c','3d','3e','4a','4b','4c','4d','4e','5a','5b','5c','5d','5e','6a','6b','6c','6d','6e','7a','7b','7c','7d','7e','7f'];
+// ─────────── R1/R2/R3 chart helpers ───────────
+function drawTrajectoryShared(canvasId) {
+  const el = document.getElementById(canvasId);
+  if (!el) return;
+  new Chart(el.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: ['W1','W2','W3','W4','W5','W6','W7','W8','W9','W10','W11','W12','W13'],
+      datasets: [
+        { label: 'Top-quartile zone', data: [3200,3400,3600,3800,4000,4200,4400,4600,4800,5000,5200,5400,5600], backgroundColor: 'rgba(168,237,186,.45)', borderColor: 'transparent', fill: '+1', pointRadius: 0, tension: .4 },
+        { label: 'Top-quartile floor', data: [1800,1950,2100,2250,2400,2550,2700,2850,3000,3150,3300,3450,3600], backgroundColor: 'transparent', borderColor: 'transparent', pointRadius: 0, fill: false, tension: .4 },
+        { label: 'Industry median', data: [1100,1180,1260,1340,1420,1500,1580,1660,1740,1820,1900,1980,2060], borderColor: '#b2b3b4', borderWidth: 2, borderDash: [3,3], pointRadius: 0, tension: .4 },
+        { label: 'Your projected', data: [0,1840,2680,3520,4360,5200,6040,6880,7720,8560,9400,10240,11080], borderColor: '#007c89', borderWidth: 3, borderDash: [6,4], tension: .4, pointRadius: (c) => c.dataIndex === 1 ? 6 : 0, pointBackgroundColor: '#007c89', pointBorderColor: '#fff', pointBorderWidth: 2 },
+        { label: 'You today', data: [0, null, null, null, null, null, null, null, null, null, null, null, null], borderColor: 'transparent', pointRadius: 8, pointBackgroundColor: '#b61a37', pointBorderColor: '#fff', pointBorderWidth: 3 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: $${c.parsed.y?.toLocaleString() || 0}` }}}, scales: { x: { grid: { display: false }}, y: { grid: { color: '#ececec' }, ticks: { callback: v => '$' + (v/1000).toFixed(1) + 'k' }}} }
+  });
+}
+function drawR1Trajectory() { drawTrajectoryShared('chart-r1-traj'); }
+function drawR2Trajectory() { drawTrajectoryShared('chart-r2-traj'); }
+function drawR3Decay() {
+  const el = document.getElementById('chart-r3-decay');
+  if (!el) return;
+  new Chart(el.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: ['0','7','14','21','28','35','42','49','56','63'],
+      datasets: [
+        { label: 'Predicted open rate', data: [38.2,38.0,37.5,36.8,35.9,34.7,33.4,32.0,30.5,29.0], borderColor: '#b61a37', backgroundColor: 'rgba(182,26,55,.1)', borderWidth: 3, tension: .3, fill: true, pointRadius: (c) => c.dataIndex === 6 ? 7 : 0, pointBackgroundColor: '#b61a37', pointBorderColor: '#fff', pointBorderWidth: 2 },
+        { label: 'Industry baseline', data: [38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2,38.2], borderColor: '#b2b3b4', borderDash: [3,3], borderWidth: 2, pointRadius: 0, fill: false }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }}, scales: { x: { title: { display: true, text: 'Days silent', font: { size: 10 }}, grid: { color: '#ececec' }}, y: { min: 25, max: 42, grid: { color: '#ececec' }, ticks: { callback: v => v + '%' }}} }
+  });
+}
+
+const order = ['r1','r2','r3','1a','1b','1c','1d','1e','2a','2b','2c','2d','2e','2f','3a','3b','3c','3d','3e','4a','4b','4c','4d','4e','5a','5b','5c','5d','5e','6a','6b','6c','6d','6e','7a','7b','7c','7d','7e','7f'];
 const idx = order.indexOf(id);
 
 const m = MOCKUPS[id];
